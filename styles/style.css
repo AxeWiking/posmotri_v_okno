@@ -80,18 +80,18 @@ ol {
 
 
 .content {
-
   display: flex;
   gap: 30px;
   width: 1140px;
   margin: auto;
+  padding-top: 4px;
 }
 
 .result {
   display: grid;
   grid-template-rows: 54px min-content auto;
   grid-template-areas: "." "video" "control";
-  row-gap: 18px;
+  row-gap: 16px;
 }
 
 .result__video-container {
