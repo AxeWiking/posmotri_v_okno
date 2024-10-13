@@ -83,12 +83,11 @@ ol {
   gap: 30px;
   width: 1140px;
   margin: auto;
-  padding-top: 12px;
 }
 
 .result {
   display: grid;
-  grid-template-rows: 54px min-content auto;
+  grid-template-rows: 66px min-content auto;
   grid-template-areas: "." "video" "control";
   row-gap: 16px;
 }
@@ -196,8 +195,12 @@ ol {
   height: 34px;
 }
 
+.content__details {
+  flex-grow: 1;
+}
+
 .title {
-  margin-bottom: 16px;
+  margin-bottom: 28px;
   font-family: Oswald;
   font-weight: 700;
   font-size: 75px;
@@ -207,10 +210,6 @@ ol {
 
 .title .content__accent {
   color: #545050;
-}
-
-.content__details {
-  flex-grow: 1;
 }
 
 .content__list {
