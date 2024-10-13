@@ -89,9 +89,9 @@ ol {
 
 .result {
   display: grid;
-  grid-template-rows: 52px min-content 52px;
+  grid-template-rows: 54px min-content auto;
   grid-template-areas: "." "video" "control";
-  row-gap: 16px;
+  row-gap: 18px;
 }
 
 .result__video-container {
