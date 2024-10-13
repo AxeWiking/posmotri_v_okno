@@ -219,7 +219,7 @@ ol {
   flex-direction: column;
   gap: 30px;
   height: 298px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .content__card-link_current {
