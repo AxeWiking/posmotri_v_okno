@@ -11,14 +11,14 @@ html {
 .page {
   display: flex;
   align-items: center;
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 400;  
+  font-weight: 400;
+  font-size: 18px;  
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -42,10 +42,10 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
@@ -55,23 +55,23 @@ ol {
 }
 
 .button {
-  cursor: pointer;
+  border: solid 1px white;
+  color: white;
   font-family: inherit;
-  font-size: inherit;
   font-weight: 700;
+  font-size: inherit;
   line-height: inherit;
   background-color: transparent;
-  color: white;
-  border: solid 1px white;
 }
 
 .button:hover {
   text-decoration: underline;
+  cursor: pointer;  
 }
 
 .button:focus-visible {
-  outline-offset: 2px;
   outline: 1px solid white;
+  outline-offset: 2px;
 }
 
 .button:active {
@@ -80,25 +80,25 @@ ol {
 
 
 .content {
-  width: 1140px;
-  margin: auto;
 
   display: flex;
   gap: 30px;
+  width: 1140px;
+  margin: auto;
 }
 
 .result {
   display: grid;
-  grid-template-rows: 54px min-content 54px;
+  grid-template-rows: 52px min-content 52px;
   grid-template-areas: "." "video" "control";
   row-gap: 16px;
 }
 
 .result__video-container {
   position: relative;
+  grid-area: video;
   width: 711px;
   height: 386px;
-  grid-area: video;
 }
 
 .result__video {
@@ -108,51 +108,48 @@ ol {
 }
 
 .search-form {
-  grid-area: control;
   display: flex;
+  grid-area: control;
   justify-content: space-between;
   align-items: flex-end;
 }
 
 .search-form__fieldset {
-  line-height: 1.2em;
+  width: fit-content;
   border: none;
-  width: fit-content;  
+  line-height: 1.2em;
 }
 
 .search-form__fieldset-title {
   font-family: inherit;
-  font-size: inherit;
   font-weight: inherit;
+  font-size: inherit;
   line-height: inherit;
 }
 
 .search-form__fieldset-title + .search-form__label {
-  border-bottom: solid 1px white;
-}
-
-.search-form__label ~ .search-form__fieldset-title {
+  border-top: solid 1px white;
   border-bottom: solid 1px white;
 }
 
 .search-form__textfield {
   width: 225px;
   height: 27px;
+  margin: 0;
+  border: none;
+  padding: 0;
+  color: white;
+
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  background-color: transparent;
 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0;
-  margin: 0;
-
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-
-  background-color: transparent;
-  color: white;
-  border: none;
 }
 
 .search-form__textfield::placeholder {
@@ -160,13 +157,13 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  outline-offset: 2px;
   outline: 1px solid white;
+  outline-offset: 2px;
 }
 
 .search-form__label:has(input[type="text"]:active) {
-  outline-offset: 0px;
   outline: 1px solid white;
+  outline-offset: 0px;
 }
 
 .search-form__checkbox-list {
@@ -179,19 +176,20 @@ ol {
   display: inline-block;
   width: 19px;
   height: 19px;
+  border: solid 1px white;
   vertical-align: middle;
   background-color: transparent;
-  border: solid 1px white;
 }
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-decoration-skip-ink: none;
+  cursor: pointer;  
 }
 
-.search-form__pseudo-checkbox:active {
-  outline-offset: -10px;  
+.search-form__pseudo-checkbox:active {  
   outline: 8px solid white;
+  outline-offset: -10px;
 }
 
 .search-form__submit-button {
@@ -200,12 +198,12 @@ ol {
 }
 
 .title {
+  margin-bottom: 16px;
   font-family: Oswald;
-  font-size: 75px;
   font-weight: 700;
+  font-size: 75px;
   line-height: 0.94em;
   text-transform: uppercase;
-  margin-bottom: 16px;
 }
 
 .title .content__accent {
@@ -218,11 +216,11 @@ ol {
 
 .content__list {
   position: relative;
-  height: 298px;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
   gap: 30px;
+  height: 298px;
+  overflow: scroll;
 }
 
 .content__card-link_current {
@@ -230,10 +228,15 @@ ol {
 }
 
 .content__card-link {
-  margin: 2px;
   display: block;
-  text-decoration: none;
+  margin: 2px;
   color: white;
+  text-decoration: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  cursor: pointer;  
 }
 
 .content__card-link:focus-visible {
@@ -248,8 +251,8 @@ ol {
 
 .content__video-card-title {
   font-family: Oswald;
-  font-size: 30px;
   font-weight: 700;
+  font-size: 30px;
   line-height: 1em;
   text-transform: uppercase;
 }
