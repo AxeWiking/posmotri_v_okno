@@ -132,7 +132,7 @@ ol {
 
 .search-form__textfield {
   width: 225px;
-  height: 27px;
+  min-height: 27px;
   margin: 0;
   border: none;
   padding: 0;
@@ -178,6 +178,7 @@ ol {
   border: solid 1px white;
   vertical-align: middle;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -202,7 +203,7 @@ ol {
 
 .title {
   margin-bottom: 28px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 0.94em;
@@ -217,9 +218,12 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   height: 298px;
   overflow: auto;
+}
+
+.content__list-item:not(:last-child) {
+  margin-top: 30px;
 }
 
 .content__card-link_current {
@@ -245,15 +249,21 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+}
+
+.content__video-card-description-container {
+  max-width: 200px;
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  overflow: hidden;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 1em;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
@@ -265,13 +275,14 @@ ol {
 }
 
 .content__video-card-thumbnail {
+  align-self: center;
   width: 194px;
-  height: 103px;
   object-fit: cover;
 }
 
 .more-button {
   width: 399px;
   height: 34px;
+  margin-top: 30px;
   line-height: 1.2em;
 }
