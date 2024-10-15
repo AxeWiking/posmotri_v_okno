@@ -223,7 +223,7 @@ ol {
 }
 
 .content__list-item:not(:last-child) {
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .content__card-link_current {
@@ -253,6 +253,7 @@ ol {
 
 .content__video-card-description-container {
   max-width: 200px;
+  flex-grow: 1;
 }
 
 .content__video-card-title {
@@ -270,10 +271,6 @@ ol {
   line-height: 0.9em;
 }
 
-.content__video-card-description-container {
-  flex-grow: 1;  
-}
-
 .content__video-card-thumbnail {
   align-self: center;
   width: 194px;
@@ -283,6 +280,5 @@ ol {
 .more-button {
   width: 399px;
   height: 34px;
-  margin-top: 30px;
   line-height: 1.2em;
 }
