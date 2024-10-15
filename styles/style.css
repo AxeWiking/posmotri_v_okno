@@ -252,8 +252,8 @@ ol {
 }
 
 .content__video-card-description-container {
-  max-width: 200px;
   flex-grow: 1;
+  max-width: 200px;
 }
 
 .content__video-card-title {
@@ -274,6 +274,7 @@ ol {
 .content__video-card-thumbnail {
   align-self: center;
   width: 194px;
+  margin: 1px;
   object-fit: cover;
 }
 
